@@ -1,84 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>anzhuo的贪吃蛇游戏</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-    }
-    #canvas {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      margin: 20px auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <script>
-    // 变量初始化
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-    var blockSize = 10;
-    var width = canvas.width / blockSize;
-    var height = canvas.height / blockSize;
-    var score = 0;
-    var snake = {
-      direction: '',
-      body: []
-    };
-    var food = {
-      x: 0,
-      y: 0
-    };
-
-    // 游戏初始化
-    function init() {
-      // ToDo: 初始化代码
-      // 初始化蛇的位置、食物的位置、方向等
-    }
-
-    // 绘制画面
-    function draw() {
-      // ToDo: 绘制代码，包括蛇和食物的绘制
-    }
-
-    // 更新游戏状态
-    function update() {
-      // ToDo: 更新蛇的位置，检测碰撞等
-    }
-
-    // 游戏结束
-    function endGame() {
-      // ToDo: 游戏结束代码，包括分数统计、重新开始等
-    }
-
-    // 游戏循环
-    function loop() {
-      // 清空画布并绘制
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      draw();
-      // 检测游戏状态并更新
-      update();
-      // 下一帧循环
-      if (snake.direction !== '') {
-        window.requestAnimationFrame(loop);
-      }
-    }
-
-    // 获取按键输入
-    document.addEventListener('keydown', function(e) {
-      // ToDo: 获取按键输入代码
-    });
-
-    // 初始化游戏
-    init();
-
-    // 开始游戏循环
-    window.requestAnimationFrame(loop);
-  </script>
-</body>
-</html>
+<ul class="player__playlist list">
+  <li class="player__song">
+    <img class="player__img img" src="img/1.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">周杰伦</b>
+      <span class="flex">
+        <span class="player__title">听妈妈的话</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/1.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/2.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">薛之谦</b>
+      <span class="flex">
+        <span class="player__title">认真的雪</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/2.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/3.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">艾辰</b>
+      <span class="flex">
+        <span class="player__title">错位时空</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/3.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/4.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">陈明</b>
+      <span class="flex">
+        <span class="player__title">我要找到你</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/4.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/5.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">周深</b>
+      <span class="flex">
+        <span class="player__title">雪落下的声音</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/5.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/6.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">王力宏,谭维维</b>
+      <span class="flex">
+        <span class="player__title">缘分一道桥 (电影《长城》片尾曲)</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/6.mp3"></audio>
+  </li>
+  <li class="player__song">
+    <img class="player__img img" src="img/7.jpg" alt="cover">
+    <p class="player__context">
+      <b class="player__song-name">周深</b>
+      <span class="flex">
+        <span class="player__title">大鱼 (动漫《大鱼海棠》印象曲)</span>
+        <span class="player__song-time"></span>
+      </span>
+    </p>
+    <audio class="audio" src="img/7.mp3"></audio>
+  </li>
+</ul>

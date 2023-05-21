@@ -2,96 +2,82 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>地铁跑酷游戏</title>
+  <title>anzhuo的贪吃蛇游戏</title>
   <style>
     body {
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
     }
-    #wrapper {
-      width: 800px;
-      height: 600px;
-      margin: 0 auto;
+    #canvas {
+      background-color: #fff;
       border: 1px solid #ccc;
-      position: relative;
-      overflow: hidden;
-    }
-    #player {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      bottom: 50px;
-      left: 50px;
-      background-color: red;
-      border-radius: 50%;
-    }
-    .obstacle {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      background-color: green;
-      bottom: 50px;
-    }
-    .obstacle-1 {
-      left: 200px;
-    }
-    .obstacle-2 {
-      left: 350px;
-    }
-    .obstacle-3 {
-      left: 500px;
+      margin: 20px auto;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="player"></div>
-    <div class="obstacle obstacle-1"></div>
-    <div class="obstacle obstacle-2"></div>
-    <div class="obstacle obstacle-3"></div>
-  </div>
+  <canvas id="canvas" width="500" height="500"></canvas>
   <script>
     // 变量初始化
-    var wrapper = document.getElementById('wrapper');
-    var player = document.getElementById('player');
-    var obstacles = document.querySelectorAll('.obstacle');
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var blockSize = 10;
+    var width = canvas.width / blockSize;
+    var height = canvas.height / blockSize;
+    var score = 0;
+    var snake = {
+      direction: '',
+      body: []
+    };
+    var food = {
+      x: 0,
+      y: 0
+    };
 
-   // 动画循环函数
-    function loop() {
-      // 每帧移动
-      movePlayer();
-      moveObstacles();
-      // 检测碰撞
-      if(checkCollision()) {
-        // 游戏结束
-        endGame();
-        return;
-      }
-      // 下一帧循环
-      window.requestAnimationFrame(loop);
+    // 游戏初始化
+    function init() {
+      // ToDo: 初始化代码
+      // 初始化蛇的位置、食物的位置、方向等
     }
 
-   // 移动玩家
-    function movePlayer() {
-      // ToDo: 移动玩家代码
+    // 绘制画面
+    function draw() {
+      // ToDo: 绘制代码，包括蛇和食物的绘制
     }
 
-   // 移动障碍物
-    function moveObstacles() {
-      // ToDo: 移动障碍物代码
+    // 更新游戏状态
+    function update() {
+      // ToDo: 更新蛇的位置，检测碰撞等
     }
 
-   // 检测碰撞
-    function checkCollision() {
-      // ToDo: 检测碰撞代码 (玩家和障碍物)
-    }
-
-   // 游戏结束
+    // 游戏结束
     function endGame() {
-      // ToDo: 游戏结束代码
+      // ToDo: 游戏结束代码，包括分数统计、重新开始等
     }
 
-   // 开始游戏
+    // 游戏循环
+    function loop() {
+      // 清空画布并绘制
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      draw();
+      // 检测游戏状态并更新
+      update();
+      // 下一帧循环
+      if (snake.direction !== '') {
+        window.requestAnimationFrame(loop);
+      }
+    }
+
+    // 获取按键输入
+    document.addEventListener('keydown', function(e) {
+      // ToDo: 获取按键输入代码
+    });
+
+    // 初始化游戏
+    init();
+
+    // 开始游戏循环
     window.requestAnimationFrame(loop);
   </script>
 </body>

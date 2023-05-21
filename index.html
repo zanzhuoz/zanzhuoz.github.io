@@ -1,16 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>anzhuo的备用网站</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>地铁跑酷游戏</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    #wrapper {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+    #player {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .obstacle {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: green;
+      bottom: 50px;
+    }
+    .obstacle-1 {
+      left: 200px;
+    }
+    .obstacle-2 {
+      left: 350px;
+    }
+    .obstacle-3 {
+      left: 500px;
+    }
+  </style>
 </head>
 <body>
-	<header>
-		<h1><span class="animated-text">欢迎 </span>你来到<span class="animated-text">anzhuo的备用网站</span></h1>
-	</header>
-	<main>
-		<section>
-			<h2>什么是备用网站？</h2>
-			<p>备用网站是一个备份站点，提供与原站点相同或类似的内容。当原站点无法访问时，您可以访问备用网站获取所需的信息。</p>
-		</section>
+  <div id="wrapper">
+    <div id="player"></div>
+    <div class="obstacle obstacle-1"></div>
+    <div class="obstacle obstacle-2"></div>
+    <div class="obstacle obstacle-3"></div>
+  </div>
+  <script>
+    // 变量初始化
+    var wrapper = document.getElementById('wrapper');
+    var player = document.getElementById('player');
+    var obstacles = document.querySelectorAll('.obstacle');
+
+   // 动画循环函数
+    function loop() {
+      // 每帧移动
+      movePlayer();
+      moveObstacles();
+      // 检测碰撞
+      if(checkCollision()) {
+        // 游戏结束
+        endGame();
+        return;
+      }
+      // 下一帧循环
+      window.requestAnimationFrame(loop);
+    }
+
+   // 移动玩家
+    function movePlayer() {
+      // ToDo: 移动玩家代码
+    }
+
+   // 移动障碍物
+    function moveObstacles() {
+      // ToDo: 移动障碍物代码
+    }
+
+   // 检测碰撞
+    function checkCollision() {
+      // ToDo: 检测碰撞代码 (玩家和障碍物)
+    }
+
+   // 游戏结束
+    function endGame() {
+      // ToDo: 游戏结束代码
+    }
+
+   // 开始游戏
+    window.requestAnimationFrame(loop);
+  </script>
+</body>
+</html>

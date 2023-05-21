@@ -1,172 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>音乐享受</title>
-</head>
-<body>
-<a href="姑娘在远方.html">
-<input type=button value="姑娘在远方" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="我的天空.html">
-<input type=button value="我的天空" >
-</a>
-</body>
-</html>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="夏烟火.html">
-<input type=button value="夏·烟火" >
-</a>
-</body>
-</html>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="小城夏天.html">
-<input type=button value="小城夏天" >
-</a>
-</body>
-</html>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="zhandian.html">
-<input type=button value="查看anzhuo所有站点（包括成员站点）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="面会菜.html">
-<input type=button value="面会菜" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/爱如火.mp3">
-<input type=button value="爱如火（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/起风了.mp3">
-<input type=button value="起风了（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/星辰大海.mp3">
-<input type=button value="星辰大海（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/青花瓷.mp3">
-<input type=button value="青花瓷（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/落在生命里的光 - 尹昔眠.mp3">
-<input type=button value="落在生命里的光（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/洛杉矶.mp3">
-<input type=button value="洛杉矶（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="/音乐/夏天的风-火羊瞌睡了.128.mp3">
-<input type=button value="夏天的风（直接下载）" >
-</a>
-</body>
-</html>
-<html>
-<head>
-</head>
-<body>
-<a href="https://github.com/zanzhuoz/zanzhuoz.github.io">
-<input type=button value="更多音乐尽在这里" >
-</a>
-</body>
-</html>
-<style>
-/*--预设--*/ 
-body { padding:0px;margin: 0px; } 
-#lyrow, #lyrow input, #lyrow textarea { font-size:12px;font-family: 'Microsoft YaHei', '微软雅黑', MicrosoftJhengHei, '华文细黑', STHeiti, MingLiu; } 
-#lyrow { height:100vh;width: 100vw; } 
-#lyrow div { min-height: 18px;  } 
-#lyrow input, #lyrow textarea { border:rgb(235, 235, 235) 1px solid;border-radius: 3px;padding: 5px 8px;outline: 0; } 
-#lyrow input:hover, #lyrow textarea:hover { border: 1px solid #6bc1f2; } 
-/*--编辑--*/ 
-#lyrow .wenzi { text-shadow:47px 20px 5px rgba(0, 0, 0, 1);font-size:22px; } 
+<html lang="zh-CN">
 
-</style>
-<!--下载font-awesome.css图标包-->
-<!--https://www.58html.com/html/template/font-awesome.zip-->
-<link rel="stylesheet" href="https://www.58html.com/gui/css/font-awesome/css/font-awesome.css">
-<div id="lyrow">
-<div class="wenzi">anzhuo  尽在出品！<br></div>
-</div>
-<link rel="icon" href="favicon.ico" sizes="64x64">
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<style type="text/css">
-		*{
-			padding: 0;
-			margin: 0;
-		}
-		.big_box{
-			height: 100vh;
-			background: url('https://zanzhuoz.github.io./666.jpg');
-			background-size: 100% 100%;
-		}
-	</style>
-	<body>
-		<div class="big_box">
-		
-</html>
+<head>
+    <meta charset="UTF-8">
+    <title>清爽简单的HTML5音乐播放器演示</title>
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+    <div id="dowebok">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+            <div id="player-track">
+                <div id="album-name"></div>
+                <div id="track-name"></div>
+                <div id="track-time">
+                    <div id="current-time"></div>
+                    <div id="track-length"></div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art">
+                    <img src="images/1.jpg" class="active" id="_1">
+                    <img src="images/2.jpg" id="_2">
+                    <img src="images/3.jpg" id="_3">
+                    <img src="images/4.jpg" id="_4">
+                    <img src="images/5.jpg" id="_5">
+                    <div id="buffer-box">加载中...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
